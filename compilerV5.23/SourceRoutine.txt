@@ -1,0 +1,38 @@
+PROGRAM bubble {程序头 程序名标识符}
+VAR INTEGER i,j,num;
+PROCEDURE q(integer num);
+VAR INTEGER i,j,k;
+INTEGER t;
+BEGIN
+i:=1;
+j:=1;
+WHILE i < num DO
+j:=num-i+1;
+k:=1;
+WHILE k<j DO
+IF a[k+1] < a[k]
+THEN t:=a[k];
+a[k]:=a[k+1];
+a[k+1]:=t
+ELSE t:=0
+FI;
+k:=k+1
+ENDWH;
+i:=i+1
+ENDWH
+END
+BEGIN
+READ(num);
+i:=1;
+WHILE i<(num+1) DO
+READ(j);
+a:=j;
+i:=i+1
+ENDWH;
+q(num);
+i:=1;
+WHILE i<(num+1) DO
+WRITE(a);
+i:=i+1
+ENDWH
+END

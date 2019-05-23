@@ -1,0 +1,1024 @@
+state num: 179
+state: 0  state size: 2
+Program--->ProgramHead  DeclarePart  ProgramBody  0
+ProgramHead--->PROGRAM  ProgramName  0
+
+
+state: 1  state size: 5
+Program--->ProgramHead  DeclarePart  ProgramBody  1
+DeclarePart--->TypeDec  VarDec  ProcDec  0
+TypeDec--->#  0
+TypeDec--->TypeDeclaration  0
+TypeDeclaration--->TYPE  TypeDecList  0
+
+
+state: 2  state size: 2
+ProgramHead--->PROGRAM  ProgramName  1
+ProgramName--->ID  0
+
+
+state: 3  state size: 2
+Program--->ProgramHead  DeclarePart  ProgramBody  2
+ProgramBody--->BEGIN  StmList  END  0
+
+
+state: 4  state size: 4
+DeclarePart--->TypeDec  VarDec  ProcDec  1
+VarDec--->#  0
+VarDec--->VarDeclaration  0
+VarDeclaration--->VAR  VarDecList  0
+
+
+state: 5  state size: 1
+TypeDec--->TypeDeclaration  1
+
+
+state: 6  state size: 3
+TypeDeclaration--->TYPE  TypeDecList  1
+TypeDecList--->TypeId  =  TypeName  ;  TypeDecMore  0
+TypeId--->ID  0
+
+
+state: 7  state size: 1
+ProgramHead--->PROGRAM  ProgramName  2
+
+
+state: 8  state size: 1
+ProgramName--->ID  1
+
+
+state: 9  state size: 1
+Program--->ProgramHead  DeclarePart  ProgramBody  3
+
+
+state: 10  state size: 13
+ProgramBody--->BEGIN  StmList  END  1
+StmList--->Stm  StmMore  0
+Stm--->ID  AssCall  0
+Stm--->ConditionalStm  0
+Stm--->LoopStm  0
+Stm--->InputStm  0
+Stm--->OutputStm  0
+Stm--->ReturnStm  0
+ConditionalStm--->IF  RelExp  THEN  StmList  ELSE  StmList  FI  0
+LoopStm--->WHILE  RelExp  DO  StmList  ENDWH  0
+InputStm--->READ  (  Invar  )  0
+OutputStm--->WRITE  (  Exp  )  0
+ReturnStm--->RETURN  (  Exp  )  0
+
+
+state: 11  state size: 4
+DeclarePart--->TypeDec  VarDec  ProcDec  2
+ProcDec--->#  0
+ProcDec--->ProcDeclaration  0
+ProcDeclaration--->PROCEDURE  ProcName  (  ParamList  )  ;  ProcDecPart  ProcBody  ProcDecMore  0
+
+
+state: 12  state size: 1
+VarDec--->VarDeclaration  1
+
+
+state: 13  state size: 11
+TypeName--->ID  0
+TypeName--->BaseType  0
+TypeName--->StructureType  0
+BaseType--->INTEGER  0
+BaseType--->CHAR  0
+StructureType--->ArrayType  0
+StructureType--->RecType  0
+ArrayType--->ARRAY  [  Low  ..  Top  ]  OF  BaseType  0
+RecType--->RECORD  FieldDecList  END  0
+VarDeclaration--->VAR  VarDecList  1
+VarDecList--->TypeName  VarIdList  ;  VarDecMore  0
+
+
+state: 14  state size: 1
+TypeDeclaration--->TYPE  TypeDecList  2
+
+
+state: 15  state size: 1
+TypeDecList--->TypeId  =  TypeName  ;  TypeDecMore  1
+
+
+state: 16  state size: 1
+TypeId--->ID  1
+
+
+state: 17  state size: 1
+ProgramBody--->BEGIN  StmList  END  2
+
+
+state: 18  state size: 3
+StmList--->Stm  StmMore  1
+StmMore--->;  StmList  0
+StmMore--->#  0
+
+
+state: 19  state size: 8
+Stm--->ID  AssCall  1
+AssCall--->AssignmentRest  0
+AssCall--->CallStmRest  0
+AssignmentRest--->VariMore  :=  Exp  0
+CallStmRest--->(  ActParamList  )  0
+VariMore--->.  FieldVar  0
+VariMore--->[  Exp  ]  0
+VariMore--->#  0
+
+
+state: 20  state size: 1
+Stm--->ConditionalStm  1
+
+
+state: 21  state size: 1
+Stm--->LoopStm  1
+
+
+state: 22  state size: 1
+Stm--->InputStm  1
+
+
+state: 23  state size: 1
+Stm--->OutputStm  1
+
+
+state: 24  state size: 1
+Stm--->ReturnStm  1
+
+
+state: 25  state size: 8
+ConditionalStm--->IF  RelExp  THEN  StmList  ELSE  StmList  FI  1
+Exp--->Term  OtherTerm  0
+RelExp--->Exp  OtherRelE  0
+Term--->Factor  OtherFactor  0
+Factor--->INTC  0
+Factor--->(  Exp  )  0
+Factor--->Variable  0
+Variable--->ID  VariMore  0
+
+
+state: 26  state size: 8
+LoopStm--->WHILE  RelExp  DO  StmList  ENDWH  1
+Exp--->Term  OtherTerm  0
+RelExp--->Exp  OtherRelE  0
+Term--->Factor  OtherFactor  0
+Factor--->INTC  0
+Factor--->(  Exp  )  0
+Factor--->Variable  0
+Variable--->ID  VariMore  0
+
+
+state: 27  state size: 1
+InputStm--->READ  (  Invar  )  1
+
+
+state: 28  state size: 1
+OutputStm--->WRITE  (  Exp  )  1
+
+
+state: 29  state size: 1
+ReturnStm--->RETURN  (  Exp  )  1
+
+
+state: 30  state size: 1
+DeclarePart--->TypeDec  VarDec  ProcDec  3
+
+
+state: 31  state size: 1
+ProcDec--->ProcDeclaration  1
+
+
+state: 32  state size: 2
+ProcDeclaration--->PROCEDURE  ProcName  (  ParamList  )  ;  ProcDecPart  ProcBody  ProcDecMore  1
+ProcName--->ID  0
+
+
+state: 33  state size: 1
+TypeName--->ID  1
+
+
+state: 34  state size: 1
+TypeName--->BaseType  1
+
+
+state: 35  state size: 1
+TypeName--->StructureType  1
+
+
+state: 36  state size: 1
+BaseType--->INTEGER  1
+
+
+state: 37  state size: 1
+BaseType--->CHAR  1
+
+
+state: 38  state size: 1
+StructureType--->ArrayType  1
+
+
+state: 39  state size: 1
+StructureType--->RecType  1
+
+
+state: 40  state size: 1
+ArrayType--->ARRAY  [  Low  ..  Top  ]  OF  BaseType  1
+
+
+state: 41  state size: 6
+BaseType--->INTEGER  0
+BaseType--->CHAR  0
+ArrayType--->ARRAY  [  Low  ..  Top  ]  OF  BaseType  0
+RecType--->RECORD  FieldDecList  END  1
+FieldDecList--->BaseType  IdList  ;  FieldDecMore  0
+FieldDecList--->ArrayType  IdList  ;  FieldDecMore  0
+
+
+state: 42  state size: 1
+VarDeclaration--->VAR  VarDecList  2
+
+
+state: 43  state size: 2
+VarDecList--->TypeName  VarIdList  ;  VarDecMore  1
+VarIdList--->ID  VarIdMore  0
+
+
+state: 44  state size: 10
+TypeDecList--->TypeId  =  TypeName  ;  TypeDecMore  2
+TypeName--->ID  0
+TypeName--->BaseType  0
+TypeName--->StructureType  0
+BaseType--->INTEGER  0
+BaseType--->CHAR  0
+StructureType--->ArrayType  0
+StructureType--->RecType  0
+ArrayType--->ARRAY  [  Low  ..  Top  ]  OF  BaseType  0
+RecType--->RECORD  FieldDecList  END  0
+
+
+state: 45  state size: 1
+ProgramBody--->BEGIN  StmList  END  3
+
+
+state: 46  state size: 1
+StmList--->Stm  StmMore  2
+
+
+state: 47  state size: 13
+StmList--->Stm  StmMore  0
+Stm--->ID  AssCall  0
+Stm--->ConditionalStm  0
+Stm--->LoopStm  0
+Stm--->InputStm  0
+Stm--->OutputStm  0
+Stm--->ReturnStm  0
+StmMore--->;  StmList  1
+ConditionalStm--->IF  RelExp  THEN  StmList  ELSE  StmList  FI  0
+LoopStm--->WHILE  RelExp  DO  StmList  ENDWH  0
+InputStm--->READ  (  Invar  )  0
+OutputStm--->WRITE  (  Exp  )  0
+ReturnStm--->RETURN  (  Exp  )  0
+
+
+state: 48  state size: 1
+Stm--->ID  AssCall  2
+
+
+state: 49  state size: 1
+AssCall--->AssignmentRest  1
+
+
+state: 50  state size: 1
+AssCall--->CallStmRest  1
+
+
+state: 51  state size: 1
+AssignmentRest--->VariMore  :=  Exp  1
+
+
+state: 52  state size: 9
+CallStmRest--->(  ActParamList  )  1
+Exp--->Term  OtherTerm  0
+ActParamList--->#  0
+ActParamList--->Exp  ActParamMore  0
+Term--->Factor  OtherFactor  0
+Factor--->INTC  0
+Factor--->(  Exp  )  0
+Factor--->Variable  0
+Variable--->ID  VariMore  0
+
+
+state: 53  state size: 2
+VariMore--->.  FieldVar  1
+FieldVar--->ID  FieldVarMore  0
+
+
+state: 54  state size: 7
+VariMore--->[  Exp  ]  1
+Exp--->Term  OtherTerm  0
+Term--->Factor  OtherFactor  0
+Factor--->INTC  0
+Factor--->(  Exp  )  0
+Factor--->Variable  0
+Variable--->ID  VariMore  0
+
+
+state: 55  state size: 1
+ConditionalStm--->IF  RelExp  THEN  StmList  ELSE  StmList  FI  2
+
+
+state: 56  state size: 5
+Exp--->Term  OtherTerm  1
+OtherTerm--->#  0
+OtherTerm--->AddOp  Exp  0
+AddOp--->+  0
+AddOp--->-  0
+
+
+state: 57  state size: 4
+RelExp--->Exp  OtherRelE  1
+OtherRelE--->CmpOp  Exp  0
+CmpOp---><  0
+CmpOp--->=  0
+
+
+state: 58  state size: 5
+Term--->Factor  OtherFactor  1
+OtherFactor--->#  0
+OtherFactor--->MultOp  Term  0
+MultOp--->*  0
+MultOp--->/  0
+
+
+state: 59  state size: 1
+Factor--->INTC  1
+
+
+state: 60  state size: 7
+Exp--->Term  OtherTerm  0
+Term--->Factor  OtherFactor  0
+Factor--->INTC  0
+Factor--->(  Exp  )  0
+Factor--->Variable  0
+Factor--->(  Exp  )  1
+Variable--->ID  VariMore  0
+
+
+state: 61  state size: 1
+Factor--->Variable  1
+
+
+state: 62  state size: 4
+VariMore--->.  FieldVar  0
+VariMore--->[  Exp  ]  0
+VariMore--->#  0
+Variable--->ID  VariMore  1
+
+
+state: 63  state size: 1
+LoopStm--->WHILE  RelExp  DO  StmList  ENDWH  2
+
+
+state: 64  state size: 2
+InputStm--->READ  (  Invar  )  2
+Invar--->ID  0
+
+
+state: 65  state size: 7
+OutputStm--->WRITE  (  Exp  )  2
+Exp--->Term  OtherTerm  0
+Term--->Factor  OtherFactor  0
+Factor--->INTC  0
+Factor--->(  Exp  )  0
+Factor--->Variable  0
+Variable--->ID  VariMore  0
+
+
+state: 66  state size: 7
+ReturnStm--->RETURN  (  Exp  )  2
+Exp--->Term  OtherTerm  0
+Term--->Factor  OtherFactor  0
+Factor--->INTC  0
+Factor--->(  Exp  )  0
+Factor--->Variable  0
+Variable--->ID  VariMore  0
+
+
+state: 67  state size: 1
+ProcDeclaration--->PROCEDURE  ProcName  (  ParamList  )  ;  ProcDecPart  ProcBody  ProcDecMore  2
+
+
+state: 68  state size: 1
+ProcName--->ID  1
+
+
+state: 69  state size: 2
+ArrayType--->ARRAY  [  Low  ..  Top  ]  OF  BaseType  2
+Low--->INTC  0
+
+
+state: 70  state size: 1
+RecType--->RECORD  FieldDecList  END  2
+
+
+state: 71  state size: 2
+FieldDecList--->BaseType  IdList  ;  FieldDecMore  1
+IdList--->ID  IdMore  0
+
+
+state: 72  state size: 2
+FieldDecList--->ArrayType  IdList  ;  FieldDecMore  1
+IdList--->ID  IdMore  0
+
+
+state: 73  state size: 1
+VarDecList--->TypeName  VarIdList  ;  VarDecMore  2
+
+
+state: 74  state size: 3
+VarIdList--->ID  VarIdMore  1
+VarIdMore--->,  VarIdList  0
+VarIdMore--->#  0
+
+
+state: 75  state size: 1
+TypeDecList--->TypeId  =  TypeName  ;  TypeDecMore  3
+
+
+state: 76  state size: 1
+StmMore--->;  StmList  2
+
+
+state: 77  state size: 7
+AssignmentRest--->VariMore  :=  Exp  2
+Exp--->Term  OtherTerm  0
+Term--->Factor  OtherFactor  0
+Factor--->INTC  0
+Factor--->(  Exp  )  0
+Factor--->Variable  0
+Variable--->ID  VariMore  0
+
+
+state: 78  state size: 1
+CallStmRest--->(  ActParamList  )  2
+
+
+state: 79  state size: 3
+ActParamList--->Exp  ActParamMore  1
+ActParamMore--->,  ActParamList  0
+ActParamMore--->#  0
+
+
+state: 80  state size: 1
+VariMore--->.  FieldVar  2
+
+
+state: 81  state size: 3
+FieldVar--->ID  FieldVarMore  1
+FieldVarMore--->[  Exp  ]  0
+FieldVarMore--->#  0
+
+
+state: 82  state size: 1
+VariMore--->[  Exp  ]  2
+
+
+state: 83  state size: 13
+StmList--->Stm  StmMore  0
+Stm--->ID  AssCall  0
+Stm--->ConditionalStm  0
+Stm--->LoopStm  0
+Stm--->InputStm  0
+Stm--->OutputStm  0
+Stm--->ReturnStm  0
+ConditionalStm--->IF  RelExp  THEN  StmList  ELSE  StmList  FI  0
+ConditionalStm--->IF  RelExp  THEN  StmList  ELSE  StmList  FI  3
+LoopStm--->WHILE  RelExp  DO  StmList  ENDWH  0
+InputStm--->READ  (  Invar  )  0
+OutputStm--->WRITE  (  Exp  )  0
+ReturnStm--->RETURN  (  Exp  )  0
+
+
+state: 84  state size: 1
+Exp--->Term  OtherTerm  2
+
+
+state: 85  state size: 7
+Exp--->Term  OtherTerm  0
+Term--->Factor  OtherFactor  0
+OtherTerm--->AddOp  Exp  1
+Factor--->INTC  0
+Factor--->(  Exp  )  0
+Factor--->Variable  0
+Variable--->ID  VariMore  0
+
+
+state: 86  state size: 1
+AddOp--->+  1
+
+
+state: 87  state size: 1
+AddOp--->-  1
+
+
+state: 88  state size: 1
+RelExp--->Exp  OtherRelE  2
+
+
+state: 89  state size: 7
+Exp--->Term  OtherTerm  0
+OtherRelE--->CmpOp  Exp  1
+Term--->Factor  OtherFactor  0
+Factor--->INTC  0
+Factor--->(  Exp  )  0
+Factor--->Variable  0
+Variable--->ID  VariMore  0
+
+
+state: 90  state size: 1
+CmpOp---><  1
+
+
+state: 91  state size: 1
+CmpOp--->=  1
+
+
+state: 92  state size: 1
+Term--->Factor  OtherFactor  2
+
+
+state: 93  state size: 6
+Term--->Factor  OtherFactor  0
+Factor--->INTC  0
+Factor--->(  Exp  )  0
+Factor--->Variable  0
+OtherFactor--->MultOp  Term  1
+Variable--->ID  VariMore  0
+
+
+state: 94  state size: 1
+MultOp--->*  1
+
+
+state: 95  state size: 1
+MultOp--->/  1
+
+
+state: 96  state size: 1
+Factor--->(  Exp  )  2
+
+
+state: 97  state size: 1
+Variable--->ID  VariMore  2
+
+
+state: 98  state size: 13
+StmList--->Stm  StmMore  0
+Stm--->ID  AssCall  0
+Stm--->ConditionalStm  0
+Stm--->LoopStm  0
+Stm--->InputStm  0
+Stm--->OutputStm  0
+Stm--->ReturnStm  0
+ConditionalStm--->IF  RelExp  THEN  StmList  ELSE  StmList  FI  0
+LoopStm--->WHILE  RelExp  DO  StmList  ENDWH  0
+LoopStm--->WHILE  RelExp  DO  StmList  ENDWH  3
+InputStm--->READ  (  Invar  )  0
+OutputStm--->WRITE  (  Exp  )  0
+ReturnStm--->RETURN  (  Exp  )  0
+
+
+state: 99  state size: 1
+InputStm--->READ  (  Invar  )  3
+
+
+state: 100  state size: 1
+Invar--->ID  1
+
+
+state: 101  state size: 1
+OutputStm--->WRITE  (  Exp  )  3
+
+
+state: 102  state size: 1
+ReturnStm--->RETURN  (  Exp  )  3
+
+
+state: 103  state size: 15
+TypeName--->ID  0
+TypeName--->BaseType  0
+TypeName--->StructureType  0
+BaseType--->INTEGER  0
+BaseType--->CHAR  0
+StructureType--->ArrayType  0
+StructureType--->RecType  0
+ArrayType--->ARRAY  [  Low  ..  Top  ]  OF  BaseType  0
+RecType--->RECORD  FieldDecList  END  0
+ProcDeclaration--->PROCEDURE  ProcName  (  ParamList  )  ;  ProcDecPart  ProcBody  ProcDecMore  3
+ParamList--->#  0
+ParamList--->ParamDecList  0
+ParamDecList--->Param  ParamMore  0
+Param--->VAR  TypeName  FormList  0
+Param--->TypeName  FormList  0
+
+
+state: 104  state size: 1
+ArrayType--->ARRAY  [  Low  ..  Top  ]  OF  BaseType  3
+
+
+state: 105  state size: 1
+Low--->INTC  1
+
+
+state: 106  state size: 1
+RecType--->RECORD  FieldDecList  END  3
+
+
+state: 107  state size: 1
+FieldDecList--->BaseType  IdList  ;  FieldDecMore  2
+
+
+state: 108  state size: 3
+IdList--->ID  IdMore  1
+IdMore--->,  IdList  0
+IdMore--->#  0
+
+
+state: 109  state size: 1
+FieldDecList--->ArrayType  IdList  ;  FieldDecMore  2
+
+
+state: 110  state size: 13
+TypeName--->ID  0
+TypeName--->BaseType  0
+TypeName--->StructureType  0
+BaseType--->INTEGER  0
+BaseType--->CHAR  0
+StructureType--->ArrayType  0
+StructureType--->RecType  0
+ArrayType--->ARRAY  [  Low  ..  Top  ]  OF  BaseType  0
+RecType--->RECORD  FieldDecList  END  0
+VarDecList--->TypeName  VarIdList  ;  VarDecMore  0
+VarDecList--->TypeName  VarIdList  ;  VarDecMore  3
+VarDecMore--->#  0
+VarDecMore--->VarDecList  0
+
+
+state: 111  state size: 1
+VarIdList--->ID  VarIdMore  2
+
+
+state: 112  state size: 2
+VarIdList--->ID  VarIdMore  0
+VarIdMore--->,  VarIdList  1
+
+
+state: 113  state size: 5
+TypeDecList--->TypeId  =  TypeName  ;  TypeDecMore  0
+TypeDecList--->TypeId  =  TypeName  ;  TypeDecMore  4
+TypeId--->ID  0
+TypeDecMore--->#  0
+TypeDecMore--->TypeDecList  0
+
+
+state: 114  state size: 1
+AssignmentRest--->VariMore  :=  Exp  3
+
+
+state: 115  state size: 1
+CallStmRest--->(  ActParamList  )  3
+
+
+state: 116  state size: 1
+ActParamList--->Exp  ActParamMore  2
+
+
+state: 117  state size: 9
+Exp--->Term  OtherTerm  0
+ActParamList--->#  0
+ActParamList--->Exp  ActParamMore  0
+ActParamMore--->,  ActParamList  1
+Term--->Factor  OtherFactor  0
+Factor--->INTC  0
+Factor--->(  Exp  )  0
+Factor--->Variable  0
+Variable--->ID  VariMore  0
+
+
+state: 118  state size: 1
+FieldVar--->ID  FieldVarMore  2
+
+
+state: 119  state size: 7
+Exp--->Term  OtherTerm  0
+Term--->Factor  OtherFactor  0
+Factor--->INTC  0
+Factor--->(  Exp  )  0
+Factor--->Variable  0
+Variable--->ID  VariMore  0
+FieldVarMore--->[  Exp  ]  1
+
+
+state: 120  state size: 1
+VariMore--->[  Exp  ]  3
+
+
+state: 121  state size: 1
+ConditionalStm--->IF  RelExp  THEN  StmList  ELSE  StmList  FI  4
+
+
+state: 122  state size: 1
+OtherTerm--->AddOp  Exp  2
+
+
+state: 123  state size: 1
+OtherRelE--->CmpOp  Exp  2
+
+
+state: 124  state size: 1
+OtherFactor--->MultOp  Term  2
+
+
+state: 125  state size: 1
+Factor--->(  Exp  )  3
+
+
+state: 126  state size: 1
+LoopStm--->WHILE  RelExp  DO  StmList  ENDWH  4
+
+
+state: 127  state size: 1
+InputStm--->READ  (  Invar  )  4
+
+
+state: 128  state size: 1
+OutputStm--->WRITE  (  Exp  )  4
+
+
+state: 129  state size: 1
+ReturnStm--->RETURN  (  Exp  )  4
+
+
+state: 130  state size: 1
+ProcDeclaration--->PROCEDURE  ProcName  (  ParamList  )  ;  ProcDecPart  ProcBody  ProcDecMore  4
+
+
+state: 131  state size: 1
+ParamList--->ParamDecList  1
+
+
+state: 132  state size: 3
+ParamDecList--->Param  ParamMore  1
+ParamMore--->;  ParamDecList  0
+ParamMore--->#  0
+
+
+state: 133  state size: 10
+TypeName--->ID  0
+TypeName--->BaseType  0
+TypeName--->StructureType  0
+BaseType--->INTEGER  0
+BaseType--->CHAR  0
+StructureType--->ArrayType  0
+StructureType--->RecType  0
+ArrayType--->ARRAY  [  Low  ..  Top  ]  OF  BaseType  0
+RecType--->RECORD  FieldDecList  END  0
+Param--->VAR  TypeName  FormList  1
+
+
+state: 134  state size: 2
+Param--->TypeName  FormList  1
+FormList--->ID  FidMore  0
+
+
+state: 135  state size: 2
+ArrayType--->ARRAY  [  Low  ..  Top  ]  OF  BaseType  4
+Top--->INTC  0
+
+
+state: 136  state size: 8
+BaseType--->INTEGER  0
+BaseType--->CHAR  0
+ArrayType--->ARRAY  [  Low  ..  Top  ]  OF  BaseType  0
+FieldDecList--->BaseType  IdList  ;  FieldDecMore  0
+FieldDecList--->ArrayType  IdList  ;  FieldDecMore  0
+FieldDecList--->BaseType  IdList  ;  FieldDecMore  3
+FieldDecMore--->#  0
+FieldDecMore--->FieldDecList  0
+
+
+state: 137  state size: 1
+IdList--->ID  IdMore  2
+
+
+state: 138  state size: 2
+IdList--->ID  IdMore  0
+IdMore--->,  IdList  1
+
+
+state: 139  state size: 8
+BaseType--->INTEGER  0
+BaseType--->CHAR  0
+ArrayType--->ARRAY  [  Low  ..  Top  ]  OF  BaseType  0
+FieldDecList--->BaseType  IdList  ;  FieldDecMore  0
+FieldDecList--->ArrayType  IdList  ;  FieldDecMore  0
+FieldDecList--->ArrayType  IdList  ;  FieldDecMore  3
+FieldDecMore--->#  0
+FieldDecMore--->FieldDecList  0
+
+
+state: 140  state size: 1
+VarDecList--->TypeName  VarIdList  ;  VarDecMore  4
+
+
+state: 141  state size: 1
+VarDecMore--->VarDecList  1
+
+
+state: 142  state size: 1
+VarIdMore--->,  VarIdList  2
+
+
+state: 143  state size: 1
+TypeDecList--->TypeId  =  TypeName  ;  TypeDecMore  5
+
+
+state: 144  state size: 1
+TypeDecMore--->TypeDecList  1
+
+
+state: 145  state size: 1
+ActParamMore--->,  ActParamList  2
+
+
+state: 146  state size: 1
+FieldVarMore--->[  Exp  ]  2
+
+
+state: 147  state size: 13
+StmList--->Stm  StmMore  0
+Stm--->ID  AssCall  0
+Stm--->ConditionalStm  0
+Stm--->LoopStm  0
+Stm--->InputStm  0
+Stm--->OutputStm  0
+Stm--->ReturnStm  0
+ConditionalStm--->IF  RelExp  THEN  StmList  ELSE  StmList  FI  0
+ConditionalStm--->IF  RelExp  THEN  StmList  ELSE  StmList  FI  5
+LoopStm--->WHILE  RelExp  DO  StmList  ENDWH  0
+InputStm--->READ  (  Invar  )  0
+OutputStm--->WRITE  (  Exp  )  0
+ReturnStm--->RETURN  (  Exp  )  0
+
+
+state: 148  state size: 1
+LoopStm--->WHILE  RelExp  DO  StmList  ENDWH  5
+
+
+state: 149  state size: 1
+ProcDeclaration--->PROCEDURE  ProcName  (  ParamList  )  ;  ProcDecPart  ProcBody  ProcDecMore  5
+
+
+state: 150  state size: 1
+ParamDecList--->Param  ParamMore  2
+
+
+state: 151  state size: 13
+TypeName--->ID  0
+TypeName--->BaseType  0
+TypeName--->StructureType  0
+BaseType--->INTEGER  0
+BaseType--->CHAR  0
+StructureType--->ArrayType  0
+StructureType--->RecType  0
+ArrayType--->ARRAY  [  Low  ..  Top  ]  OF  BaseType  0
+RecType--->RECORD  FieldDecList  END  0
+ParamDecList--->Param  ParamMore  0
+Param--->VAR  TypeName  FormList  0
+Param--->TypeName  FormList  0
+ParamMore--->;  ParamDecList  1
+
+
+state: 152  state size: 2
+Param--->VAR  TypeName  FormList  2
+FormList--->ID  FidMore  0
+
+
+state: 153  state size: 1
+Param--->TypeName  FormList  2
+
+
+state: 154  state size: 3
+FormList--->ID  FidMore  1
+FidMore--->,  FormList  0
+FidMore--->#  0
+
+
+state: 155  state size: 1
+ArrayType--->ARRAY  [  Low  ..  Top  ]  OF  BaseType  5
+
+
+state: 156  state size: 1
+Top--->INTC  1
+
+
+state: 157  state size: 1
+FieldDecList--->BaseType  IdList  ;  FieldDecMore  4
+
+
+state: 158  state size: 1
+FieldDecMore--->FieldDecList  1
+
+
+state: 159  state size: 1
+IdMore--->,  IdList  2
+
+
+state: 160  state size: 1
+FieldDecList--->ArrayType  IdList  ;  FieldDecMore  4
+
+
+state: 161  state size: 1
+FieldVarMore--->[  Exp  ]  3
+
+
+state: 162  state size: 1
+ConditionalStm--->IF  RelExp  THEN  StmList  ELSE  StmList  FI  6
+
+
+state: 163  state size: 6
+DeclarePart--->TypeDec  VarDec  ProcDec  0
+TypeDec--->#  0
+TypeDec--->TypeDeclaration  0
+TypeDeclaration--->TYPE  TypeDecList  0
+ProcDeclaration--->PROCEDURE  ProcName  (  ParamList  )  ;  ProcDecPart  ProcBody  ProcDecMore  6
+ProcDecPart--->DeclarePart  0
+
+
+state: 164  state size: 1
+ParamMore--->;  ParamDecList  2
+
+
+state: 165  state size: 1
+Param--->VAR  TypeName  FormList  3
+
+
+state: 166  state size: 1
+FormList--->ID  FidMore  2
+
+
+state: 167  state size: 2
+FormList--->ID  FidMore  0
+FidMore--->,  FormList  1
+
+
+state: 168  state size: 1
+ArrayType--->ARRAY  [  Low  ..  Top  ]  OF  BaseType  6
+
+
+state: 169  state size: 1
+ConditionalStm--->IF  RelExp  THEN  StmList  ELSE  StmList  FI  7
+
+
+state: 170  state size: 3
+ProgramBody--->BEGIN  StmList  END  0
+ProcDeclaration--->PROCEDURE  ProcName  (  ParamList  )  ;  ProcDecPart  ProcBody  ProcDecMore  7
+ProcBody--->ProgramBody  0
+
+
+state: 171  state size: 1
+ProcDecPart--->DeclarePart  1
+
+
+state: 172  state size: 1
+FidMore--->,  FormList  2
+
+
+state: 173  state size: 3
+BaseType--->INTEGER  0
+BaseType--->CHAR  0
+ArrayType--->ARRAY  [  Low  ..  Top  ]  OF  BaseType  7
+
+
+state: 174  state size: 4
+ProcDeclaration--->PROCEDURE  ProcName  (  ParamList  )  ;  ProcDecPart  ProcBody  ProcDecMore  0
+ProcDeclaration--->PROCEDURE  ProcName  (  ParamList  )  ;  ProcDecPart  ProcBody  ProcDecMore  8
+ProcDecMore--->#  0
+ProcDecMore--->ProcDeclaration  0
+
+
+state: 175  state size: 1
+ProcBody--->ProgramBody  1
+
+
+state: 176  state size: 1
+ArrayType--->ARRAY  [  Low  ..  Top  ]  OF  BaseType  8
+
+
+state: 177  state size: 1
+ProcDeclaration--->PROCEDURE  ProcName  (  ParamList  )  ;  ProcDecPart  ProcBody  ProcDecMore  9
+
+
+state: 178  state size: 1
+ProcDecMore--->ProcDeclaration  1
+
+

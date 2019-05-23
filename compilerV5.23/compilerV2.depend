@@ -1,0 +1,137 @@
+# depslib dependency file v1.0
+1558451866 source:h:\code\test\compilerv2\main.cpp
+	<fstream>
+	<iostream>
+	<cstdlib>
+	<vector>
+	<set>
+	<map>
+	"LexicalAnalyzer.h"
+	"GrammerAnalyzer.h"
+	"compiler.h"
+
+1558243480 h:\code\test\compilerv2\lexicalanalyzer.h
+
+1558344142 h:\code\test\compilerv2\grammeranalyzer.h
+
+1558452253 h:\code\test\compilerv2\compiler.h
+
+1558142360 source:f:\compilingthery\compilerv2\main.cpp
+	<fstream>
+	<iostream>
+	<cstdlib>
+	<vector>
+	<set>
+	<map>
+	"LexicalAnalyzer.h"
+	"GrammerAnalyzer.h"
+	"compiler.h"
+
+1558142814 f:\compilingthery\compilerv2\lexicalanalyzer.h
+
+1558107548 f:\compilingthery\compilerv2\grammeranalyzer.h
+
+1558142360 f:\compilingthery\compilerv2\compiler.h
+
+1558143324 source:e:\compilingthery\compilerv2\main.cpp
+	<fstream>
+	<iostream>
+	<cstdlib>
+	<vector>
+	<set>
+	<map>
+	"LexicalAnalyzer.h"
+	"GrammerAnalyzer.h"
+	"compiler.h"
+
+1558142814 e:\compilingthery\compilerv2\lexicalanalyzer.h
+
+1558107548 e:\compilingthery\compilerv2\grammeranalyzer.h
+
+1558142360 e:\compilingthery\compilerv2\compiler.h
+
+1558147278 source:f:\compilingtheory\compilerv2\main.cpp
+	<fstream>
+	<iostream>
+	<cstdlib>
+	<vector>
+	<set>
+	<map>
+	"LexicalAnalyzer.h"
+	"GrammerAnalyzer.h"
+	"compiler.h"
+
+1558147224 f:\compilingtheory\compilerv2\lexicalanalyzer.h
+
+1558146490 f:\compilingtheory\compilerv2\grammeranalyzer.h
+
+1558147418 f:\compilingtheory\compilerv2\compiler.h
+
+1558503271 source:c:\users\jlu\desktop\compilingtheory\compilerv2\main.cpp
+	<fstream>
+	<iostream>
+	<cstdlib>
+	<vector>
+	<set>
+	<map>
+	"LexicalAnalyzer.h"
+	"GrammerAnalyzer.h"
+	"compiler.h"
+
+1558243482 c:\users\jlu\desktop\compilingtheory\compilerv2\lexicalanalyzer.h
+
+1558344144 c:\users\jlu\desktop\compilingtheory\compilerv2\grammeranalyzer.h
+
+1558503951 c:\users\jlu\desktop\compilingtheory\compilerv2\compiler.h
+
+1558507377 source:c:\users\jlu\desktop\compilerv2\main.cpp
+	<fstream>
+	<iostream>
+	<cstdlib>
+	<vector>
+	<set>
+	<map>
+	"LexicalAnalyzer.h"
+	"GrammerAnalyzer.h"
+	"compiler.h"
+
+1558506846 c:\users\jlu\desktop\compilerv2\lexicalanalyzer.h
+
+1558511171 c:\users\jlu\desktop\compilerv2\grammeranalyzer.h
+
+1558507377 c:\users\jlu\desktop\compilerv2\compiler.h
+
+1558538803 source:h:\code\test\version\compilerv5.22\main.cpp
+	<fstream>
+	<iostream>
+	<cstdlib>
+	<vector>
+	<set>
+	<map>
+	"LexicalAnalyzer.h"
+	"GrammerAnalyzer.h"
+	"compiler.h"
+
+1558506848 h:\code\test\version\compilerv5.22\lexicalanalyzer.h
+
+1558538940 h:\code\test\version\compilerv5.22\grammeranalyzer.h
+
+1558538925 h:\code\test\version\compilerv5.22\compiler.h
+
+1558582738 source:h:\code\test\version\compilerv5.23\main.cpp
+	<fstream>
+	<iostream>
+	<cstdlib>
+	<vector>
+	<set>
+	<map>
+	"LexicalAnalyzer.h"
+	"GrammerAnalyzer.h"
+	"compiler.h"
+
+1558506848 h:\code\test\version\compilerv5.23\lexicalanalyzer.h
+
+1558581652 h:\code\test\version\compilerv5.23\grammeranalyzer.h
+
+1558582867 h:\code\test\version\compilerv5.23\compiler.h
+

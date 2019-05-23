@@ -1,0 +1,15 @@
+PROGRAM demo
+TYPE 	type1=INTEGER;
+	type2=CHAR;
+	type3=ARRAY[3..6] OF INTEGER;
+VAR 	INTEGER z1,z2,z3;
+	CHAR zz1,zz2,zz3;
+BEGIN
+	READ(z1);
+	WRITE(z2);
+	IF zz1<3 THEN
+	READ(zz2)
+	ELSE
+	READ(zz3)
+	FI
+END 
