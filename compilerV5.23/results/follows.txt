@@ -1,0 +1,67 @@
+Program: #
+ProgramHead: TYPE VAR PROCEDURE BEGIN
+DeclarePart: BEGIN
+ProgramBody: # PROCEDURE BEGIN
+ProgramName: TYPE VAR PROCEDURE BEGIN
+TypeDec: VAR PROCEDURE BEGIN
+VarDec: PROCEDURE BEGIN
+ProcDec: BEGIN
+TypeDeclaration: VAR PROCEDURE BEGIN
+TypeDecList: VAR PROCEDURE BEGIN
+TypeId: =
+TypeName: ; ID
+TypeDecMore: VAR PROCEDURE BEGIN
+BaseType: ; ID
+StructureType: ; ID
+ArrayType: ; ID
+RecType: ; ID
+Low: ..
+Top: ]
+FieldDecList: END
+IdList: ;
+FieldDecMore: END
+IdMore: ;
+VarDeclaration: PROCEDURE BEGIN
+VarDecList: PROCEDURE BEGIN
+VarIdList: ;
+VarDecMore: PROCEDURE BEGIN
+VarIdMore: ;
+ProcDeclaration: BEGIN
+ProcName: (
+ParamList: )
+ProcDecPart: BEGIN
+ProcBody: PROCEDURE BEGIN
+ProcDecMore: BEGIN
+ParamDecList: )
+Param: ; )
+ParamMore: )
+FormList: ; )
+FidMore: ; )
+StmList: END ELSE FI ENDWH
+Stm: ; END ELSE FI ENDWH
+StmMore: END ELSE FI ENDWH
+ConditionalStm: ; END ELSE FI ENDWH
+LoopStm: ; END ELSE FI ENDWH
+InputStm: ; END ELSE FI ENDWH
+OutputStm: ; END ELSE FI ENDWH
+ReturnStm: ; END ELSE FI ENDWH
+AssCall: ; END ELSE FI ENDWH
+AssignmentRest: ; END ELSE FI ENDWH
+CallStmRest: ; END ELSE FI ENDWH
+VariMore: := * / + - ; END ) , < = THEN DO ] ELSE FI ENDWH
+Exp: ; END ) , < = THEN DO ] ELSE FI ENDWH
+RelExp: THEN DO
+Invar: )
+ActParamList: )
+ActParamMore: )
+OtherRelE: THEN DO
+CmpOp: ( INTC ID
+Term: + - ; END ) , < = THEN DO ] ELSE FI ENDWH
+OtherTerm: ; END ) , < = THEN DO ] ELSE FI ENDWH
+AddOp: ( INTC ID
+Factor: * / + - ; END ) , < = THEN DO ] ELSE FI ENDWH
+OtherFactor: + - ; END ) , < = THEN DO ] ELSE FI ENDWH
+MultOp: ( INTC ID
+Variable: * / + - ; END ) , < = THEN DO ] ELSE FI ENDWH
+FieldVar: := * / + - ; END ) , < = THEN DO ] ELSE FI ENDWH
+FieldVarMore: := * / + - ; END ) , < = THEN DO ] ELSE FI ENDWH

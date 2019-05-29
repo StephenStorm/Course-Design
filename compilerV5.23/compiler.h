@@ -373,6 +373,8 @@ void compiler::LLDriver(){
             }
             else{
                 cout<<"sym not match!"<<endl;
+                cout<<"line:  "<<t->line<<"   col:  "<<t->column<<endl;
+                break;
             }
         }
     }

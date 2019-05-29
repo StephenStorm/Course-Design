@@ -1,5 +1,5 @@
 4
-词法结构不完整
-希望出现字符'='
-不希望出现字符
-希望出现字符'''
+The_lexical_structure_is_incomplete.
+Desired_character:'='
+The_unexpected_character:
+Expected_character:'''

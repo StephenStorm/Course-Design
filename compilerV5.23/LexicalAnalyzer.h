@@ -126,6 +126,19 @@ public:
             cout<<endl;
         }
     }
+    void outputToFile(){
+        fstream outfile("./results/symbols.txt",ios::out);
+        for(int i=0;i<length;i++){
+            char *temp=p[i];
+            outfile<<i<<":";
+            while(*temp!='\0'){
+                outfile<<*(temp++);
+            }
+
+            outfile<<endl;
+        }
+        outfile.close();
+    }
     int getLength(){
         return length;
     }
@@ -206,7 +219,7 @@ public:
         keywordsFileName=name;
     }
     void showTokens(){
-        cout<<"------源程序<"<<srcFileName<<">的Token序列如下所示:"<<endl;
+        cout<<"------Tokens of source program<"<<srcFileName<<">:"<<endl;
         tokens->resetHead();
         Token *temp;
         while((temp=tokens->getNext())!=NULL){
@@ -232,7 +245,7 @@ public:
         getStateTransition();
         getErrorMessage();
         parseAll();
-        //outputToFile();
+        outputToFile();
         //测试部分
         //showStateTransition();
         //tokens->showAll(&keywords);
@@ -394,7 +407,7 @@ private:
             }
             if((state>=1&&state<=7)||(state>=10&&state<=maxSuccessState)){//成功状态
                 if(stateTransition[state][index]==-2){
-                    cout<<"第"<<line<<"行第"<<column<<"列:"<<ErrorMessage[2]<<'\''<<ch<<"\',非法的标识符"<<endl;
+                    cout<<"Row "<<line<<",Col "<<column<<":"<<ErrorMessage[2]<<'\''<<ch<<"\',invilid identifier."<<endl;
                     exit(1);
                 }
                 Token* token=new Token;
@@ -429,11 +442,11 @@ private:
                     state=stateTransition[state][index];
                     state=-state;
                     if(!infile){
-                        cout<<"第"<<line<<"行第"<<column<<"列:"<<ErrorMessage[0]<<endl;
+                        cout<<"Row "<<line<<",Col "<<column<<":"<<ErrorMessage[0]<<endl;
                     }else if(state==2){
-                        cout<<"第"<<line<<"行第"<<column<<"列:"<<ErrorMessage[state]<<'\''<<ch<<'\''<<endl;
+                        cout<<"Row "<<line<<",Col "<<column<<":"<<ErrorMessage[state]<<'\''<<ch<<'\''<<endl;
                     }else{
-                        cout<<"第"<<line<<"行第"<<column<<"列:"<<ErrorMessage[state]<<endl;
+                        cout<<"Row "<<line<<",Col "<<column<<":"<<ErrorMessage[state]<<endl;
                     }
                 exit(1);
             }else{                      //注释或空白

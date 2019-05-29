@@ -183,7 +183,9 @@ private:
                             break;
                         }else{
                             unionFirst(&first[id-boundary],&first[cur-boundary]);
-                            deleteFirst(&(first[id-boundary]),symbols.add(delta));
+                            if(j<productionRules[i].follow.size()-1){
+                                deleteFirst(&(first[id-boundary]),symbols.add(delta));
+                            }
                         }
                     }
                 }
@@ -276,7 +278,7 @@ private:
     }
 public:
     void showPredicts(){
-        cout<<"------所有生成式的Predict集合如下所示:"<<endl;
+        cout<<"------Predicts:"<<endl;
         for(unsigned int i=0;i<productionRules.size();i++){
             cout<<symbols.getChars(productionRules[i].start)<<":";
             for(unsigned int j=0;j<predict[i].size();j++){
@@ -294,7 +296,7 @@ public:
         return false;
     }
      void showFirsts(){          //显示所有First集
-        cout<<"------所有非终极符的First集合如下所示:"<<endl;
+        cout<<"------Firsts:"<<endl;
         for(int i=0;i<=maxIndex-boundary;i++){
             cout<<symbols.getChars(i+boundary)<<":";
             for(unsigned int j=0;j<first[i].size();j++){
@@ -315,7 +317,7 @@ public:
         outfile.close();
     }
     void showFollows(){          //显示所有First集
-        cout<<"------所有非终极符的Folllow集合如下所示:"<<endl;
+        cout<<"------Folllows:"<<endl;
         for(int i=0;i<=maxIndex-boundary;i++){
             cout<<symbols.getChars(i+boundary)<<":";
             for(unsigned int j=0;j<follow[i].size();j++){
@@ -367,6 +369,10 @@ public:
         //symbols.showAll();
         generatePredicts();
         //showPredicts();
+        symbols.outputToFile();
+        outputToPredictFile();
+        outputToFirstFile();//输出到文件
+        outputToFollowFile();//输出到文件
 
     }
     ~GrammarAnalyzer(){

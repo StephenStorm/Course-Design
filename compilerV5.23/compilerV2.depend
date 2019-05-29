@@ -118,7 +118,7 @@
 
 1558538925 h:\code\test\version\compilerv5.22\compiler.h
 
-1558582738 source:h:\code\test\version\compilerv5.23\main.cpp
+1558621751 source:h:\code\test\version\compilerv5.23\main.cpp
 	<fstream>
 	<iostream>
 	<cstdlib>
@@ -129,9 +129,60 @@
 	"GrammerAnalyzer.h"
 	"compiler.h"
 
-1558506848 h:\code\test\version\compilerv5.23\lexicalanalyzer.h
+1558963850 h:\code\test\version\compilerv5.23\lexicalanalyzer.h
 
 1558581652 h:\code\test\version\compilerv5.23\grammeranalyzer.h
 
 1558582867 h:\code\test\version\compilerv5.23\compiler.h
+
+1559057423 source:e:\53160123\课件\课程\编译原理\语法分析\compilerv5.23\main.cpp
+	<fstream>
+	<iostream>
+	<cstdlib>
+	<vector>
+	<set>
+	<map>
+	"LexicalAnalyzer.h"
+	"GrammerAnalyzer.h"
+	"compiler.h"
+
+1559088757 e:\53160123\课件\课程\编译原理\语法分析\compilerv5.23\lexicalanalyzer.h
+
+1559088918 e:\53160123\课件\课程\编译原理\语法分析\compilerv5.23\grammeranalyzer.h
+
+1559056701 e:\53160123\课件\课程\编译原理\语法分析\compilerv5.23\compiler.h
+
+1559057424 source:f:\编译原理实验\语法分析\compilerv5.23\main.cpp
+	<fstream>
+	<iostream>
+	<cstdlib>
+	<vector>
+	<set>
+	<map>
+	"LexicalAnalyzer.h"
+	"GrammerAnalyzer.h"
+	"compiler.h"
+
+1559088758 f:\编译原理实验\语法分析\compilerv5.23\lexicalanalyzer.h
+
+1559088920 f:\编译原理实验\语法分析\compilerv5.23\grammeranalyzer.h
+
+1559056702 f:\编译原理实验\语法分析\compilerv5.23\compiler.h
+
+1559143106 source:h:\code\test\compilerv5.23\main.cpp
+	<fstream>
+	<iostream>
+	<cstdlib>
+	<vector>
+	<set>
+	<map>
+	"LexicalAnalyzer.h"
+	"GrammerAnalyzer.h"
+	"compiler.h"
+
+1559088758 h:\code\test\compilerv5.23\lexicalanalyzer.h
+
+1559088920 h:\code\test\compilerv5.23\grammeranalyzer.h
+
+1559056702 h:\code\test\compilerv5.23\compiler.h
 

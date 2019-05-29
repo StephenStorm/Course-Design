@@ -1,38 +1,32 @@
-PROGRAM bubble {程序头 程序名标识符}
-VAR INTEGER i,j,num;
-PROCEDURE q(integer num);
-VAR INTEGER i,j,k;
-INTEGER t;
+{注释}
+PROGRAM demo
+TYPE	type1=INTEGER;
+	type2=CHAR;
+	type3=ARRAY[3..6] OF INTEGER;
+	type4=	RECORD 
+		INTEGER x1,x2;
+		ARRAY[2..5] OF INTEGER y1,y2;
+		END;
+VAR 	INTEGER z1,z2,z3;
+	CHAR zz1,zz2,zz3;
+	type4 zzz1;
+PROCEDURE proc1(VAR INTEGER p1,p2;VAR CHAR p3,p4);
+	BEGIN
+		x:=2
+	END
 BEGIN
-i:=1;
-j:=1;
-WHILE i < num DO
-j:=num-i+1;
-k:=1;
-WHILE k<j DO
-IF a[k+1] < a[k]
-THEN t:=a[k];
-a[k]:=a[k+1];
-a[k+1]:=t
-ELSE t:=0
-FI;
-k:=k+1
-ENDWH;
-i:=i+1
-ENDWH
-END
-BEGIN
-READ(num);
-i:=1;
-WHILE i<(num+1) DO
-READ(j);
-a:=j;
-i:=i+1
-ENDWH;
-q(num);
-i:=1;
-WHILE i<(num+1) DO
-WRITE(a);
-i:=i+1
-ENDWH
+	READ(z1);{s;siei jej898{ejf;a}
+	WRITE(z2);
+	IF z1*z2<(123+234) THEN
+		z1:=z2
+	ELSE
+		z2:=z1
+	FI;
+	WHILE 1=2 DO
+		z3:=5
+	ENDWH;
+	proc1(1,2,3);
+	z1[2]:=4;
+	zzz1.x1:=9;
+	RETURN(0)
 END

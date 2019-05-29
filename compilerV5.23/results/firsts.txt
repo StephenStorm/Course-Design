@@ -1,0 +1,67 @@
+Program: PROGRAM
+ProgramHead: PROGRAM
+DeclarePart: TYPE VAR PROCEDURE #
+ProgramBody: BEGIN
+ProgramName: ID
+TypeDec: # TYPE
+VarDec: # VAR
+ProcDec: # PROCEDURE
+TypeDeclaration: TYPE
+TypeDecList: ID
+TypeId: ID
+TypeName: INTEGER CHAR ARRAY RECORD ID
+TypeDecMore: # ID
+BaseType: INTEGER CHAR
+StructureType: ARRAY RECORD
+ArrayType: ARRAY
+RecType: RECORD
+Low: INTC
+Top: INTC
+FieldDecList: INTEGER CHAR ARRAY
+IdList: ID
+FieldDecMore: # INTEGER CHAR ARRAY
+IdMore: # ,
+VarDeclaration: VAR
+VarDecList: INTEGER CHAR ARRAY RECORD ID
+VarIdList: ID
+VarDecMore: # INTEGER CHAR ARRAY RECORD ID
+VarIdMore: # ,
+ProcDeclaration: PROCEDURE
+ProcName: ID
+ParamList: # INTEGER CHAR ARRAY RECORD ID VAR
+ProcDecPart: TYPE VAR PROCEDURE #
+ProcBody: BEGIN
+ProcDecMore: # PROCEDURE
+ParamDecList: INTEGER CHAR ARRAY RECORD ID VAR
+Param: INTEGER CHAR ARRAY RECORD ID VAR
+ParamMore: # ;
+FormList: ID
+FidMore: # ,
+StmList: IF WHILE READ WRITE RETURN ID
+Stm: IF WHILE READ WRITE RETURN ID
+StmMore: # ;
+ConditionalStm: IF
+LoopStm: WHILE
+InputStm: READ
+OutputStm: WRITE
+ReturnStm: RETURN
+AssCall: [ . := (
+AssignmentRest: [ . :=
+CallStmRest: (
+VariMore: # [ .
+Exp: ( INTC ID
+RelExp: ( INTC ID
+Invar: ID
+ActParamList: # ( INTC ID
+ActParamMore: # ,
+OtherRelE: < =
+CmpOp: < =
+Term: ( INTC ID
+OtherTerm: # + -
+AddOp: + -
+Factor: ( INTC ID
+OtherFactor: # * /
+MultOp: * /
+Variable: ID
+FieldVar: ID
+FieldVarMore: # [
